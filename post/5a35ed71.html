@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:published_time" content="2023-12-02T12:43:33.000Z">
-<meta property="article:modified_time" content="2023-12-02T12:43:33.972Z">
+<meta property="article:modified_time" content="2023-12-02T12:44:02.082Z">
 <meta property="article:author" content="ZORRO">
 <meta property="article:tag" content="web安全">
 <meta name="twitter:card" content="summary">
@@ -58,7 +58,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-12-02 20:43:33'
+  postUpdate: '2023-12-02 20:44:02'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -162,12 +162,12 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="ZORRO"><span class="site-name">ZORRO</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">反弹shell和nc</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-02T12:43:33.000Z" title="发表于 2023-12-02 20:43:33">2023-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-02T12:43:33.972Z" title="更新于 2023-12-02 20:43:33">2023-12-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="反弹shell和nc"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="一、反弹shell"><a href="#一、反弹shell" class="headerlink" title="一、反弹shell"></a>一、反弹shell</h3><p>反弹shell：有的情况下，攻击机攻击靶机没有回显，就是不知道有没有攻击成功，而反弹shell就可以显示命令有没有执行成功，解决交互性问答。</p>
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="ZORRO"><span class="site-name">ZORRO</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">反弹shell和nc</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-02T12:43:33.000Z" title="发表于 2023-12-02 20:43:33">2023-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-02T12:44:02.082Z" title="更新于 2023-12-02 20:44:02">2023-12-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="反弹shell和nc"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="一、反弹shell"><a href="#一、反弹shell" class="headerlink" title="一、反弹shell"></a>一、反弹shell</h3><p>反弹shell：有的情况下，攻击机攻击靶机没有回显，就是不知道有没有攻击成功，而反弹shell就可以显示命令有没有执行成功，解决交互性问答。</p>
 <h3 id="二、NC"><a href="#二、NC" class="headerlink" title="二、NC"></a>二、NC</h3><h4 id="NC介绍"><a href="#NC介绍" class="headerlink" title="NC介绍"></a>NC介绍</h4><p>nc全名netcat，也称”瑞士军刀”，可以在Windows、Linux等系统运行，用来进行网络通信，文件上传等操作。</p>
 <h4 id="NC下载与安装"><a href="#NC下载与安装" class="headerlink" title="NC下载与安装"></a>NC下载与安装</h4><p>首先进入NC<a target="_blank" rel="noopener" href="https://eternallybored.org/misc/netcat/">官网</a>，直接下载一个包</p>
-<p><img src="C:\BlogImages\image-20231202201011150.png" alt="image-20231202201011150"></p>
+<p><img src="/post/BlogImages\image-20231202201011150.png" alt="image-20231202201011150"></p>
 <p>下载后直接解压，然后将nc64复制到C:\Windows\System32目录下即可。</p>
-<p><img src="C:\BlogImages\image-20231202201940915.png" alt="image-20231202201940915"></p>
+<p><img src="/post/BlogImages\image-20231202201940915.png" alt="image-20231202201940915"></p>
 <p>至此NC安装完成。</p>
 <h4 id="常用的nc参数"><a href="#常用的nc参数" class="headerlink" title="常用的nc参数"></a>常用的nc参数</h4><ul>
 <li><p>-l： 开启监听</p>
